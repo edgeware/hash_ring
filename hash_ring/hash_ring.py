@@ -154,6 +154,6 @@ class HashRing(object):
                 | b_key[entry_fn(0)] )
 
     def _hash_digest(self, key):
-        m = hashlib.new()
+        m = hashlib.md5()
         m.update(key)
         return map(ord, m.digest())
